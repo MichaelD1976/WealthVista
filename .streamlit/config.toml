@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#1E3A8A"              # Deep trustworthy blue
+backgroundColor = "#F9FAFB"           # Very light neutral background
+secondaryBackgroundColor = "#D9E6EF"  # Light blue-grey for sidebar (lighter than before)
+textColor = "#111827"                 # Dark text for clarity
+font = "sans serif"

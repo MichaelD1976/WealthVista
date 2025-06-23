@@ -11,7 +11,7 @@ def main():
         'Accumulation',
         'Drawdown',
         'Bitcoin Power Law',
-        'Asset Growth Comparisons',
+        'Asset Charts',
     ]
 
     selected_page = st.sidebar.selectbox("Select a page", options=page_options, key="selected_page")
@@ -59,7 +59,7 @@ def main():
         import page4_bitcoin
         page4_bitcoin.main()
 
-    elif selected_page == 'Asset Growth Comparisons':
+    elif selected_page == 'Asset Charts':
         import page5_charts
         page5_charts.main()
 

@@ -24,8 +24,8 @@ def main():
             st.subheader("Portfolio Inputs")
             current_value = st.number_input(f'Enter Current Portfolio Valuation {denom}', min_value = 0, value = 1_000_000)
 
-            stocks_weight = st.slider('Enter Approximate Portfolio Stocks %', min_value = 0, max_value = 100, value = 50, step = 2, key='stocks_weight')
-            bonds_weight = st.slider('Enter Approximate Portfolio Bonds %', min_value = 0, max_value = 100, value = 30, step = 2, key='bonds_weight')
+            stocks_weight = st.slider('Enter Approximate Portfolio Stocks %', min_value = 0, max_value = 100, value = 50, step = 1, key='stocks_weight')
+            bonds_weight = st.slider('Enter Approximate Portfolio Bonds %', min_value = 0, max_value = 100, value = 30, step = 1, key='bonds_weight')
             property_weight = st.slider('Enter Approximate Portfolio Property %', min_value = 0, max_value = 100, value = 10, step = 1, key='property_weight')
             cash_weight = st.slider('Enter Approximate Portfolio Cash %', min_value = 0, max_value = 100, value = 5, step = 1, key='cash_weight')
             btc_weight = st.slider('Enter Approximate Portfolio Bitcoin %', min_value = 0, max_value = 100, value = 5, step = 1, key='btc_weight')
@@ -93,7 +93,6 @@ def main():
         with st.container(border=True):
             st.subheader('Annual Asset Class % Growth Rate Assumptions')
             st.caption("Default values are inflation adjusted long term estimates")
-            st.write("")
             st.write("")
             st.write("")
             st.write("")
@@ -174,12 +173,13 @@ def main():
 
         # Create DataFrame
         df_projection = pd.DataFrame(projection_data)
+        df_projection_2 = df_projection.set_index('Year') # for display (index become year)
 
         # Display with formatting
         st.subheader("Projection Table")
         st.caption("Asset allocation rebalancing occurs at the end of each year")
         st.dataframe(
-            df_projection.style.format({col: f'{denom}{{:,.0f}}' for col in df_projection.columns if col != 'Year'})
+            df_projection_2.style.format({col: f'{denom}{{:,.0f}}' for col in df_projection.columns})
         )
 
     else:

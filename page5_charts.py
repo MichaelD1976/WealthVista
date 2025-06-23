@@ -15,7 +15,7 @@ def main():
 
 
     # --- Title ---
-    st.header("Asset Growth Comparisons", divider='blue')
+    st.header("Asset Plots", divider='blue')
     st.write('Data since 2010. Data source: y-finance. Gold price is estimated from SPDR spot ETF prices')
     st.write("")
 
@@ -38,7 +38,7 @@ def main():
     selected_columns = st.sidebar.multiselect(
         "Choose assets to visualise:",
         price_columns,
-        default=["BTC_PRICE_$", "Gold_Price_$"]
+        default=["S&P500_$", "Gold_Price_$"]
     )
 
     # --- Main plot section ---

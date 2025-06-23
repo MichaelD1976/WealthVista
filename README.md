@@ -1,3 +1,5 @@
+![WealthVista preview](streamlit_wealthvista/wealth_vista_image.png)
+
 # WealthVista Personal Finance
 
 Projection analysis of accumulation and drawdown strategies for user asset allocations 

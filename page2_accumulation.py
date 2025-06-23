@@ -274,7 +274,7 @@ def main():
     f'from total contributions of {denom}{(annual_contribution * num_years):,}.'
     )
 
-    st.plotly_chart(fig, use_container_width=False)
+    st.plotly_chart(fig, use_container_width=True)
 
 
 

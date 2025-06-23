@@ -291,7 +291,7 @@ def main():
     f"after {num_years} years the portfolio is expected to reach **{display_denom}{final_value:,}** in today's purchasing power, based on real (inflation-adjusted) growth."
     )
 
-    st.plotly_chart(fig, use_container_width=False)
+    st.plotly_chart(fig, use_container_width=True)
 
     st.caption('These projections do not account for sequence of returns risk, which can significantly impact drawdown portfolios — particularly in the early years. ' \
     'Monte Carlo simulations offer a more robust way to factor in market performance variability.')

@@ -1,6 +1,10 @@
 import streamlit as st
 
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title="My Financial App",  # Title shown in browser tab
+    page_icon="📈",                 # Emoji or link to an icon
+    layout="wide"
+)
 
 def main():
 
